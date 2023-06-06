@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <!--Header w/ zip and location-->
+  <div class="flex justify-end gap-4 border border-black">
+    <div>Littleton, Colorado</div>
+    <div class="mr-3">ZIP</div>
+  </div>
+  <!--Weather Summary-->
+  <div class="flex border border-black gap-5">
+    <div>
+      <div>Precipitation</div>
+      <div>High</div>
+      <div class="text-transparent">Clouds</div>
+      <div>Low</div>
+      <div class="text-transparent">Date</div>
+    </div>
+    <div>
+      <div>0in</div>
+      <div>63</div>
+      <div>Clouds</div>
+      <div>48</div>
+      <div>Mon 6/1</div>
+    </div>
+  </div>
+  <!--Weather Cards by Individual Day-->
+  <div class="flex flex-col border border-black">
+    <div class="flex flex-col gap-3 border border-black">
+      <div class="flex justify-between">
+        <div>
+          <div>Mon 5</div>
+          <div>Partly Cloudy</div>
+        </div>
+        <div class="flex gap-3">
+          <div>Feels Like</div>
+          <div>62/46</div>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-3">
+          <div>4pm</div>
+          <div>cloud</div>
+          <div>61</div>
+        </div>
+        <div class="flex gap-3">
+          <div>0in</div>
+          <div>wind sw</div>
+          <div>5mph</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 border border-black">
+      <div class="flex justify-between">
+        <div>
+          <div>Mon 5</div>
+          <div>Partly Cloudy</div>
+        </div>
+        <div class="flex gap-3">
+          <div>Feels Like</div>
+          <div>62/46</div>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex gap-3">
+          <div>4pm</div>
+          <div>cloud</div>
+          <div>61</div>
+        </div>
+        <div class="flex gap-3">
+          <div>0in</div>
+          <div>wind sw</div>
+          <div>5mph</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
