@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html data-theme="light"></html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,25 @@
 <script defer src="main.js"></script><link href="styles.css" rel="stylesheet"></head>
 <body>
   <!--Header w/ zip and location-->
-  <div class="flex justify-end gap-4 border border-black">
-    <div>Littleton, Colorado</div>
-    <div class="mr-3">ZIP</div>
+  <div class="flex justify-between">
+    <div class="flex justify-start gap-4 border border-black">
+      <select data-choose-theme>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="cupcake">Cupcake</option>
+        <option value="bumblebee">Bumblebee</option>
+        <option value="emerald">Emerald</option>
+        <option value="corporate">Corporate</option>
+        <option value="synthwave">Synthwave</option>
+        <option value="retro">Retro</option>
+        <option value="cyberpunk">Cyberpunk</option>
+        <option value="forest">Forest</option>
+      </select>
+    </div>
+    <div class="flex justify-end gap-4 border border-black">
+      <div>Littleton, Colorado</div>
+      <div class="mr-3">ZIP</div>
+    </div>
   </div>
   <!--Weather Summary-->
   <div class="flex border border-black gap-5">
