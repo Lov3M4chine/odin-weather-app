@@ -4,6 +4,7 @@ export async function fetchWeatherData(latitude, longitude) {
         if (response.ok) {
             const weatherData = await response.json();
             console.log(weatherData);
+            return weatherData;
         } else {
             throw new Error(`Weather data request failed`);
         }
