@@ -1,5 +1,8 @@
 import { fetchWeatherData } from './modules/weatherAPI';
 import './styles.css';
+import { themeChange } from 'theme-change';
+
+themeChange()
 
 let latitude = 39.61;
 let longitude = -105.02;
