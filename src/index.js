@@ -1,3 +1,4 @@
+import { createWeeklySummaryCards } from './modules/cardGenerators';
 import { fetchWeatherData } from './modules/weatherAPI';
 import './styles.css';
 import { themeChange } from 'theme-change';
@@ -15,3 +16,5 @@ fetchWeatherData(latitude, longitude)
     .catch(error => {
         console.error('Error fetching weather data:', error);
     });
+
+createWeeklySummaryCards();
