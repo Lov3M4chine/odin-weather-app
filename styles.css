@@ -1490,6 +1490,9 @@ html {
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1497,8 +1500,17 @@ html {
 .w-full {
   width: 100%;
 }
+.w-screen {
+  width: 100vw;
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .items-center {
   align-items: center;
@@ -1517,6 +1529,9 @@ html {
 }
 .justify-around {
   justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .gap-1 {
   gap: 0.25rem;
@@ -1607,5 +1622,11 @@ html {
 .text-primary-content {
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+@media not all and (min-width: 640px) {
+
+  .max-sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
 }
 
