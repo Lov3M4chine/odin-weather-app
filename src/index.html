@@ -11,7 +11,7 @@
   <div class="flex justify-between bg-neutral text-neutral-content">
     <div class="flex justify-start gap-4">
       <div class="flex justify-center items-center">Theme:</div>
-      <select id="theme-select" data-choose-theme class="bg-neutral text-neutral-content">
+      <select id="theme-select" data-choose-theme class="bg-info text-info-content">
         <option value="light">Light</option>
         <option value="dark">Dark</option>
         <option value="cupcake">Cupcake</option>
@@ -24,13 +24,17 @@
         <option value="forest">Forest</option>
       </select>
     </div>
-    <div class="flex justify-end gap-4">
-      <div class="flex justify-center items-center">Littleton, Colorado</div>
-      <button class="btn btn-info btn-sm mr-3">ZIP</button>
+    <div class="flex justify-end items-center gap-4">
+      <div id="location-name" class=""></div>
+      <div class="flex flex-col">
+        <button id="locationButton" class="btn btn-info btn-sm mr-3">Set Location</button>
+        <input type="text" id="locationInput" class="input input-bordered input-accent input-sm text-accent-content" style="display: none;"></input>
+        <div id="locationDropdown" style="display: none;" class="flex flex-col"></div>
+      </div>
     </div>
   </div>
   <!--Weather Summary Container-->
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center m-3 gap-3">
     <h1 class="text-center text-3xl bg-accent text-accent-content m-2 p-2 w-fit rounded">Weekly Summary</h1>
     <div id="weekly-summary-container" class="flex gap-5 bg-base-300 text-base-content justify-center text-lg w-full"></div>
   </div>

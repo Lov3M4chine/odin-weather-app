@@ -1,20 +1,16 @@
-import { initializeWeeklySummaryCards } from './modules/cardGenerators.js';
-import { initializeDailyCards } from './modules/cardGenerators.js';
-import { initializeHourlyData } from './modules/cardGenerators.js';
-import { fetchWeatherData } from './modules/weatherAPI.js';
-import './styles.css';
-import { themeChange } from 'theme-change';
+import { addEventListenerToLocationSearch, displayLocationName,} from "./modules/eventListeners";
+import {initializeWeatherData} from "./modules/cardGenerators.js";
+import "./styles.css";
+import { themeChange } from "theme-change";
 
-themeChange()
+let latitude = localStorage.getItem("latitude");
+let longitude = localStorage.getItem("longitude");
+let name = localStorage.getItem("name");
+let country = localStorage.getItem("country");
 
-let latitude = 39.61;
-let longitude = -105.02;
+themeChange();
+initializeWeatherData(latitude, longitude);
+displayLocationName(name, country);
+addEventListenerToLocationSearch(initializeWeatherData);
 
-fetchWeatherData(latitude, longitude)
-    .then(weatherData => {
-        initializeWeeklySummaryCards(weatherData);
-        initializeDailyCards(weatherData);
-    })
-    .catch(error => {
-        console.error('Error fetching weather data:', error);
-    });
+
