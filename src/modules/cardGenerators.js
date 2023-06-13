@@ -31,7 +31,7 @@ function createWeeklySummaryCard(index, weatherData) {
     isDaily
   );
 
-  let htmlCode = `<div class="bg-accent-focus text-accent-content rounded flex flex-col items-center whitespace-nowrap w-full">
+  let htmlCode = `<div class="bg-accent-focus text-accent-content rounded flex flex-col text-center items-center w-screen justify-between">
       <div>${precipitation}</div>
       <div>${tempHighInFahrenheit}</div>
       <div>${weatherInterpretation}</div>
@@ -98,18 +98,15 @@ function createHourlyData(hourlyIndex, weatherData, index) {
   let windDirection = convertWindDirection(hourlyIndex, weatherData);
   let windSpeed = convertWindSpeed(hourlyIndex, weatherData);
 
-  let htmlCode = `<div class="hourly-data flex justify-between bg-neutral text-neutral-content">
-      <div class="flex gap-3">
-        <div>${time}</div>
-        <div>${weatherInterpretation}</div>
-        <div>${hourlyTemp}</div>
-      </div>
-      <div class="flex gap-3">
-        <div>${precipitation}</div>
-        <div>${windSpeed}</div>
-        <div>${windDirection}</div>
-      </div>
-    </div>`;
+  let htmlCode = 
+  `<div class="hourly-data grid grid-cols-6 gap-3 bg-neutral text-neutral-content">
+    <div>${time}</div>
+    <div>${weatherInterpretation}</div>
+    <div>${hourlyTemp}</div>
+    <div>${precipitation}</div>
+    <div>${windSpeed}</div>
+    <div>${windDirection}</div>
+  </div>`;
 
   let container = document.getElementById(`hourly-container-${index}`);
   appendContent(htmlCode, container);
