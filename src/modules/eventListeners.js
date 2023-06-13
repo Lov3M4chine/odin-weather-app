@@ -3,6 +3,9 @@ import { fetchGeolocation } from "./geolocationAPI";
 export function displayLocationName(name, country) {
   const locationName = document.getElementById("location-name");
   locationName.innerText = name + ", " + country;
+  if (name === null || country === null) {
+    locationName.innerText = "Please select a location."
+    }
 }
 
 export function addEventListenerToLocationSearch(initialzeWeatherData) {
