@@ -9,8 +9,8 @@
 <body>
   <!--Header w/ zip and location-->
   <div class="flex justify-between bg-neutral text-neutral-content">
-    <div class="flex justify-start gap-4 border border-black">
-      <div>Theme:</div>
+    <div class="flex justify-start gap-4">
+      <div class="flex justify-center items-center">Theme:</div>
       <select id="theme-select" data-choose-theme class="bg-neutral text-neutral-content">
         <option value="light">Light</option>
         <option value="dark">Dark</option>
@@ -24,65 +24,17 @@
         <option value="forest">Forest</option>
       </select>
     </div>
-    <div class="flex justify-end gap-4 border border-black">
-      <div>Littleton, Colorado</div>
-      <div class="mr-3">ZIP</div>
+    <div class="flex justify-end gap-4">
+      <div class="flex justify-center items-center">Littleton, Colorado</div>
+      <button class="btn btn-info btn-sm mr-3">ZIP</button>
     </div>
   </div>
   <!--Weather Summary Container-->
-  <div id="weekly-summary-container" class="flex border border-black gap-5 bg-base-300 text-base-content justify-center"></div>
-  <!--Weather Cards by Individual Day-->
-  <div class="flex flex-col border border-black bg-base-100 text-base-content">
-    <div class="flex flex-col gap-3 border border-black">
-      <div class="flex justify-between">
-        <div>
-          <div class="bg-primary text-primary-content">Mon 5</div>
-          <div>Partly Cloudy</div>
-        </div>
-        <div class="flex gap-3 bg-primary text-primary-content">
-          <div>Feels Like</div>
-          <div>62/46</div>
-        </div>
-      </div>
-      <div class="flex justify-between">
-        <div class="flex gap-3">
-          <div>4pm</div>
-          <div>cloud</div>
-          <div>61</div>
-        </div>
-        <div class="flex gap-3">
-          <div>0in</div>
-          <div>wind sw</div>
-          <div>5mph</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-3 border border-black bg-base-200 text-base-content">
-      <div class="flex justify-between">
-        <div>
-          <div class="bg-secondary text-secondary-content">Tues 6</div>
-          <div>Partly Cloudy</div>
-        </div>
-        <div class="flex gap-3 bg-secondary text-secondary-content">
-          <div>Feels Like</div>
-          <div>62/46</div>
-        </div>
-      </div>
-      <div class="flex justify-between">
-        <div class="flex gap-3">
-          <div>4pm</div>
-          <div>cloud</div>
-          <div>61</div>
-        </div>
-        <div class="flex gap-3">
-          <div>0in</div>
-          <div>wind sw</div>
-          <div>5mph</div>
-        </div>
-      </div>
-    </div>
-
+  <div class="flex flex-col items-center">
+    <h1 class="text-center text-3xl bg-accent text-accent-content m-2 p-2 w-fit rounded">Weekly Summary</h1>
+    <div id="weekly-summary-container" class="flex gap-5 bg-base-300 text-base-content justify-center text-lg w-full"></div>
   </div>
+  <!--Weather Cards by Individual Day-->
+  <div id="daily-cards-container" class="flex flex-col justify-around m-3 gap-3 bg-base-100 text-base-content rounded"></div>
 </body>
 </html>

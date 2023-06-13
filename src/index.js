@@ -1,4 +1,6 @@
-import { createWeeklySummaryCards } from './modules/cardGenerators.js';
+import { initializeWeeklySummaryCards } from './modules/cardGenerators.js';
+import { initializeDailyCards } from './modules/cardGenerators.js';
+import { initializeHourlyData } from './modules/cardGenerators.js';
 import { fetchWeatherData } from './modules/weatherAPI.js';
 import './styles.css';
 import { themeChange } from 'theme-change';
@@ -10,10 +12,8 @@ let longitude = -105.02;
 
 fetchWeatherData(latitude, longitude)
     .then(weatherData => {
-        let temperature = weatherData.current_weather.temperature;
-        console.log(`temperature: ${temperature}`);
-
-        createWeeklySummaryCards(weatherData);
+        initializeWeeklySummaryCards(weatherData);
+        initializeDailyCards(weatherData);
     })
     .catch(error => {
         console.error('Error fetching weather data:', error);
